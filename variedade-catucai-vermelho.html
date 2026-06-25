@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catucaí Amarelo | Café Avelar</title>
+    <title>Catucaí Vermelho | Café Avelar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root { 
             --bg-creme: #ebdcb9; 
             --texto-marrom: #3b1b0b; 
-            --amarelo-fruto: #d4a373;
+            --vermelho-fruto: #9b2226;
         }
         body { 
             background-color: var(--bg-creme); 
@@ -24,7 +24,6 @@
         .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
         
         .hero-variedade {
-            /* Aqui você pode colocar a foto real da sua lavoura como fundo */
             background-color: rgba(59, 27, 11, 0.8);
             background-image: linear-gradient(rgba(59, 27, 11, 0.7), rgba(59, 27, 11, 0.7)), url('caminho-para-sua-foto-da-lavoura.jpg');
             background-size: cover;
@@ -32,10 +31,10 @@
             color: var(--bg-creme);
             padding: 5rem 0;
             text-align: center;
-            border-bottom: 5px solid var(--amarelo-fruto);
+            /* Destaque em vermelho */
+            border-bottom: 5px solid var(--vermelho-fruto);
         }
 
-        /* Estilização da tabela técnica */
         .table-tecnica {
             --bs-table-bg: transparent;
             --bs-table-color: var(--texto-marrom);
@@ -49,7 +48,6 @@
 </head>
 <body>
 
-    <!-- Navegação Atualizada -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">CAFÉ AVELAR</a>
@@ -58,12 +56,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-                    
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Nossas Variedades
-                        </a>
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Nossas Variedades</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="variedade-catucai-amarelo.html">Catucaí Amarelo</a></li>
                             <li><a class="dropdown-item" href="variedade-catucai-vermelho.html">Catucaí Vermelho</a></li>
@@ -71,50 +66,42 @@
                             <li><a class="dropdown-item" href="variedade-mundo-novo.html">Mundo Novo</a></li>
                         </ul>
                     </li>
-
-                    <!-- Novo Link para a página exclusiva de Lotes -->
                     <li class="nav-item"><a class="nav-link" href="lotes.html">Nossos Lotes</a></li>
-                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Preparo em Casa
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Preparo em Casa</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="extracao.html">Métodos de Extração</a></li>
                             <li><a class="dropdown-item" href="controle.html">Tempo e Temperatura</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Banner da Variedade -->
+
     <header class="hero-variedade">
         <div class="container">
-            <span class="badge mb-3" style="background-color: var(--amarelo-fruto); color: #3b1b0b; font-size: 1rem;">100% Arábica</span>
-            <h1 class="display-3">Catucaí Amarelo</h1>
-            <p class="lead mt-3">Doçura marcante e acidez brilhante cultivada no coração do Sul de Minas.</p>
+            <span class="badge mb-3" style="background-color: var(--vermelho-fruto); color: var(--bg-creme); font-size: 1rem;">100% Arábica</span>
+            <h1 class="display-3">Catucaí Vermelho</h1>
+            <p class="lead mt-3">A força e a rusticidade da nossa terra traduzidas em notas de frutas vermelhas e acidez málica.</p>
         </div>
     </header>
 
     <main class="container py-5">
         <div class="row g-5 align-items-center">
             
-            <!-- Coluna da História/Detalhes -->
             <div class="col-lg-6">
                 <h2 class="mb-4">Nossa Lavoura</h2>
-                <p>O Catucaí Amarelo é um cruzamento vigoroso entre as linhagens Icatu e Catuaí. Em nossa fazenda, esse talhão foi plantado em uma área estratégica que recebe o sol da manhã, o que favorece uma maturação lenta e uniforme dos frutos.</p>
-                <p>O resultado desse cuidado reflete diretamente na xícara: uma bebida de extrema doçura, com notas sensoriais que lembram frutas de caroço (como pêssego e damasco) e um corpo muito sedoso.</p>
+                <p>O Catucaí Vermelho é a vertente de frutos rubros da vigorosa família originada pelo cruzamento entre Icatu e Catuaí. Em nossa fazenda, ele se adaptou perfeitamente ao clima, desenvolvendo frutos que concentram açúcares de forma única durante a maturação.</p>
+                <p>O resultado na xícara é uma bebida de corpo mais denso e licoroso em comparação ao seu irmão amarelo, com notas sensoriais que remetem a frutas vermelhas silvestres e uma acidez característica que lembra a maçã (acidez málica).</p>
                 
-                <blockquote class="blockquote mt-4 p-3 border-start" style="border-color: var(--amarelo-fruto) !important; background-color: rgba(212, 163, 115, 0.1);">
-                    <p class="mb-0 font-serif"><em>"A colheita deste talhão é o momento mais esperado do ano. Quando os frutos atingem a cor amarelo-ouro, sabemos que a doçura está no seu pico máximo."</em></p>
+                <blockquote class="blockquote mt-4 p-3 border-start" style="border-color: var(--vermelho-fruto) !important; background-color: rgba(155, 34, 38, 0.1);">
+                    <p class="mb-0 font-serif"><em>"A cor rubi brilhante no pé é o nosso sinal. O Catucaí Vermelho sempre nos surpreende com a sua intensidade aromática na época da colheita."</em></p>
                     <footer class="blockquote-footer mt-2 text-dark">Sebastião Avelar</footer>
                 </blockquote>
             </div>
 
-            <!-- Coluna da Ficha Técnica (Tabela) -->
             <div class="col-lg-6">
                 <h3 class="mb-3 font-serif">Raio-X do Talhão</h3>
                 <div class="table-responsive">
@@ -126,7 +113,7 @@
                             </tr>
                             <tr>
                                 <th>Ano de Plantio</th>
-                                <td>2018</td>
+                                <td>2019</td>
                             </tr>
                             <tr>
                                 <th>Safra Atual</th>
@@ -134,15 +121,15 @@
                             </tr>
                             <tr>
                                 <th>Tipo de Colheita</th>
-                                <td>100% Manual e Seletiva (apenas frutos maduros)</td>
+                                <td>100% Manual e Seletiva</td>
                             </tr>
                             <tr>
                                 <th>Processamento Ideal</th>
-                                <td>Natural (Seca ao sol em terreiro suspenso)</td>
+                                <td>Cereja Descascado (CD) ou Natural</td>
                             </tr>
                             <tr>
                                 <th>Notas Sensoriais Comuns</th>
-                                <td>Frutas amarelas, caramelo, acidez cítrica</td>
+                                <td>Frutas vermelhas, maçã, licor, chocolate ao leite</td>
                             </tr>
                         </tbody>
                     </table>
@@ -151,12 +138,11 @@
             
         </div>
 
-        <!-- Seção de Galeria de Fotos da Lavoura -->
         <hr style="border-color: var(--texto-marrom); opacity: 0.3;" class="my-5">
         
         <div class="text-center mb-4">
             <h2>Galeria da Lavoura</h2>
-            <p>Acompanhe o desenvolvimento do nosso Catucaí Amarelo através das estações.</p>
+            <p>Acompanhe o desenvolvimento do nosso Catucaí Vermelho através das estações.</p>
         </div>
 
         <div class="row g-3">
@@ -172,7 +158,7 @@
             </div>
             <div class="col-md-4">
                 <div class="p-5 text-center border rounded" style="background-color: rgba(59, 27, 11, 0.1);">
-                    [Foto da Colheita (Amarelos)]
+                    [Foto da Colheita (Vermelhos)]
                 </div>
             </div>
         </div>

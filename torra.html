@@ -22,11 +22,18 @@
         }
         .navbar { background-color: var(--texto-marrom); }
         .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
+        .dropdown-menu { background-color: var(--texto-marrom); border: 1px solid var(--bg-creme); }
+        .dropdown-item { color: var(--bg-creme); }
+        .dropdown-item:hover { background-color: var(--verde-folha); color: white; }
         
         .card-custom { 
             background-color: transparent; 
             border: 1px solid var(--texto-marrom); 
             border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
         }
         .card-header-custom {
             background-color: rgba(59, 27, 11, 0.1);
@@ -51,7 +58,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
                     
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
@@ -65,7 +72,6 @@
                         </ul>
                     </li>
 
-                    <!-- Novo Link para a página exclusiva de Lotes -->
                     <li class="nav-item"><a class="nav-link" href="lotes.html">Nossos Lotes</a></li>
                     
                     <li class="nav-item dropdown">
@@ -78,7 +84,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="torra.html">A Torra</a></li>
                 </ul>
             </div>
         </div>
@@ -132,42 +138,61 @@
 
         <!-- Seção 2: Estilos de Torra -->
         <section class="mb-5">
-            <h2 class="mb-4 text-center">Estilos e Perfis de Torra</h2>
+            <h2 class="mb-4 text-center">O Espectro da Torra</h2>
+            <p class="text-center mb-5">Do grão claro focado no <em>terroir</em> ao grão escuro dominado pela caramelização, o mestre torrador decide o destino da xícara.</p>
             
             <div class="row g-4">
                 <!-- Nórdica -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="card card-custom h-100 text-center p-3">
-                        <h4 class="mb-3">Nórdica</h4>
-                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #d2b48c; color: #3b1b0b;">Muito Clara</span>
-                        <p class="small">Extremamente popular nos países escandinavos. A torra é interrompida logo após o Primeiro Estalo (First Crack). O foco é 100% no <em>Terroir</em>, resultando em uma bebida quase parecida com chá, com acidez altíssima, corpo leve e notas florais/frutadas explosivas.</p>
+                        <h4 class="mb-3 font-serif">Nórdica</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #d2b48c; color: #3b1b0b;">Muito Clara / Cinnamon</span>
+                        <p class="small">Extremamente popular nos países escandinavos. A torra é interrompida logo no início do Primeiro Estalo. O foco é 100% no <em>terroir</em>, resultando em uma bebida que lembra chá: corpo muito leve, acidez altíssima e notas florais/cítricas explosivas.</p>
+                    </div>
+                </div>
+
+                <!-- Clara -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom h-100 text-center p-3">
+                        <h4 class="mb-3 font-serif">Clara</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #c19a6b; color: #3b1b0b;">Clara / City</span>
+                        <p class="small">Finalizada pouco tempo após o Primeiro Estalo. É o padrão de excelência para filtrados nas cafeterias de especialidade. Mantém a acidez vibrante e frutada da origem, mas já traz um pouco mais de corpo e doçura perceptível em relação à Nórdica.</p>
                     </div>
                 </div>
 
                 <!-- Média -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="card card-custom h-100 text-center p-3">
-                        <h4 class="mb-3">Média</h4>
-                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #8b5a2b;">Equilibrada</span>
-                        <p class="small">O ponto de equilíbrio perfeito (como o nosso Catucaí Amarelo). A caramelização dos açúcares atinge seu pico sem mascarar as características originais do grão. Traz excelente doçura, corpo aveludado e acidez controlada.</p>
+                        <h4 class="mb-3 font-serif">Média</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #8b5a2b;">Média / City+</span>
+                        <p class="small">O ponto de equilíbrio perfeito. A caramelização dos açúcares atinge seu pico sem mascarar as características originais do grão. Traz excelente doçura (lembrando melaço e caramelo), corpo aveludado e uma acidez muito bem controlada e suculenta.</p>
                     </div>
                 </div>
 
                 <!-- Inglesa -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="card card-custom h-100 text-center p-3">
-                        <h4 class="mb-3">Inglesa (City+)</h4>
-                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #5c3a21;">Média-Escura</span>
-                        <p class="small">Um perfil tradicional, avançando um pouco mais no desenvolvimento pós-estalo. Reduz a acidez drasticamente em favor de um corpo mais pesado e notas intensas de castanhas, cacau e um leve amargor agradável. Muito usada para harmonização.</p>
+                        <h4 class="mb-3 font-serif">Inglesa</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #5c3a21;">Média-Escura / Full City</span>
+                        <p class="small">Um perfil mais avançado, chegando muito perto (ou encostando) no Segundo Estalo. A acidez natural despenca. O corpo se torna denso e pesado, dominado por notas de chocolate amargo, cacau torrado, castanhas e um leve e agradável amargor.</p>
                     </div>
                 </div>
 
-                <!-- Escura -->
-                <div class="col-lg-3 col-md-6">
+                <!-- Francesa -->
+                <div class="col-lg-4 col-md-6">
                     <div class="card card-custom h-100 text-center p-3">
-                        <h4 class="mb-3">Escura</h4>
-                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #2b170a;">Intensa</span>
-                        <p class="small">Os grãos chegam ao Segundo Estalo e óleos começam a surgir na superfície. A origem do grão desaparece e os sabores da torra assumem o controle (fumaça, cinzas, amargor intenso). Historicamente usada para disfarçar defeitos em cafés comerciais.</p>
+                        <h4 class="mb-3 font-serif">Francesa</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #3e2312;">Escura / French</span>
+                        <p class="small">O Segundo Estalo está a todo vapor. Óleos começam a transpirar para a superfície do grão. O sabor do <em>terroir</em> da fazenda praticamente desaparece, substituído por sabores da própria torrefação: fumaça, tostado intenso e cacau 100%.</p>
+                    </div>
+                </div>
+
+                <!-- Italiana -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom h-100 text-center p-3">
+                        <h4 class="mb-3 font-serif">Italiana</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #1a0f08;">Muito Escura / Italian</span>
+                        <p class="small">Grãos quase pretos e brilhantes (muito oleosos). A acidez não existe mais. A estrutura celular está muito degradada, resultando em notas de cinzas, carvão e um amargor pungente. Muito usada em cafés comerciais de baixa qualidade para padronizar o sabor.</p>
                     </div>
                 </div>
             </div>
