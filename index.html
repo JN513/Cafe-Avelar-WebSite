@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Avelar | Do Cultivo à Xícara</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-creme: #ebdcb9;
+            --texto-marrom: #3b1b0b;
+            --verde-folha: #4a5d23;
+            --amarelo-fruto: #d4a373;
+            --vermelho-fruto: #9b2226;
+        }
+        
+        body {
+            background-color: var(--bg-creme);
+            color: var(--texto-marrom);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .navbar-brand, .font-serif {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        .navbar { background-color: var(--texto-marrom); }
+        .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
+        .dropdown-menu { background-color: var(--texto-marrom); border: 1px solid var(--bg-creme); }
+        .dropdown-item { color: var(--bg-creme); }
+        .dropdown-item:hover { background-color: var(--verde-folha); color: white; }
+
+        .hero-section {
+            padding: 5rem 0;
+            text-align: center;
+            border-bottom: 2px solid var(--texto-marrom);
+            background-color: rgba(59, 27, 11, 0.05);
+        }
+
+        .variedade-box {
+            padding: 1.5rem;
+            border-left: 4px solid var(--texto-marrom);
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-bottom: 1.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-custom {
+            border: 1px solid var(--texto-marrom);
+            color: var(--texto-marrom);
+            font-weight: 500;
+        }
+        .btn-custom:hover {
+            background-color: var(--texto-marrom);
+            color: var(--bg-creme);
+        }
+
+        .img-historia {
+            border: 4px solid var(--texto-marrom);
+            border-radius: 8px;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background-color: rgba(59, 27, 11, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--texto-marrom);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação Atualizada -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CAFÉ AVELAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Nossas Variedades
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="variedade-catucai-amarelo.html">Catucaí Amarelo</a></li>
+                            <li><a class="dropdown-item" href="variedade-catucai-vermelho.html">Catucaí Vermelho</a></li>
+                            <li><a class="dropdown-item" href="variedade-topazio.html">Topázio</a></li>
+                            <li><a class="dropdown-item" href="variedade-mundo-novo.html">Mundo Novo</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Novo Link para a página exclusiva de Lotes -->
+                    <li class="nav-item"><a class="nav-link" href="lotes.html">Nossos Lotes</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Preparo em Casa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="extracao.html">Métodos de Extração</a></li>
+                            <li><a class="dropdown-item" href="controle.html">Tempo e Temperatura</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section container-fluid">
+        <div class="container">
+            <span class="badge mb-3 py-2 px-3" style="background-color: var(--texto-marrom); color: var(--bg-creme);">Família Avelar</span>
+            <h1 class="display-3">CAFÉ AVELAR</h1>
+            <h2 class="h3 mb-4">100% ARÁBICA</h2>
+            <p class="lead">Do cultivo criterioso no Sul de Minas até a torra científica. Rastreamos cada etapa para garantir a melhor xícara.</p>
+        </div>
+    </header>
+
+    <!-- NOVA SEÇÃO: HISTÓRIA E FILOSOFIA -->
+    <section id="historia" class="container-fluid py-5" style="background-color: rgba(74, 93, 35, 0.1);">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Tradição que se Sente na Xícara</h2>
+                    <p>Aqui no Sul de Minas Gerais, o café é mais do que uma cultura agrícola; é o relógio que dita o ritmo da nossa família. Sebastião Avelar e sua família dedicam suas vidas ao trabalho no campo, respeitando o tempo da terra e as sutilezas do clima.</p>
+                    <p>Acreditamos que um café especial não é feito por acaso. Ele é o resultado de uma equação que envolve altitude privilegiada, colheita seletiva manual e, acima de tudo, o toque humano. Cada grão que sai da nossa fazenda carrega o suor e a paixão de quem tem as mãos na terra todos os dias.</p>
+                    <p class="mb-0"><strong>Nossa missão é simples:</strong> entregar na sua mesa não apenas cafeína, mas uma experiência sensorial honesta e rastreável, direto das nossas mãos para as suas.</p>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Espaço para uma foto da família na lavoura ou da sede da fazenda -->
+                    <div class="img-historia">
+                        [Adicione aqui uma foto de Sebastião Avelar e Família na lavoura]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: As Variedades -->
+    <section id="variedades" class="container py-5">
+        <div class="text-center mb-5">
+            <h2>Nossas Variedades</h2>
+            <p>Conheça as raízes do nosso sabor. Cultivamos quatro cultivares de Arábica com dedicação exclusiva.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="variedade-box" style="border-color: var(--amarelo-fruto);">
+                    <h3 class="font-serif">Catucaí Amarelo</h3>
+                    <p class="flex-grow-1">Cruzamento vigoroso entre Icatu e Catuaí. Seus frutos amarelos absorvem o sol e desenvolvem uma doçura natural impressionante com notas de pêssego e damasco.</p>
+                    <a href="variedade-catucai-amarelo.html" class="btn btn-custom mt-3">Ver detalhes da lavoura</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="variedade-box" style="border-color: var(--vermelho-fruto);">
+                    <h3 class="font-serif">Catucaí Vermelho</h3>
+                    <p class="flex-grow-1">A vertente de frutos rubros da família Catucaí. Compartilha a rusticidade do amarelo, mas entrega nuances de frutas vermelhas silvestres e acidez málica.</p>
+                    <a href="#" class="btn btn-custom mt-3">Ver detalhes da lavoura</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="variedade-box" style="border-color: #e09f3e;">
+                    <h3 class="font-serif">Topázio</h3>
+                    <p class="flex-grow-1">Um cruzamento nobre entre Mundo Novo e Catuaí Amarelo. Uma planta exigente, que resulta em uma bebida muito elegante, sedosa e com notas florais.</p>
+                    <a href="#" class="btn btn-custom mt-3">Ver detalhes da lavoura</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="variedade-box" style="border-color: var(--verde-folha);">
+                    <h3 class="font-serif">Mundo Novo</h3>
+                    <p class="flex-grow-1">Um clássico absoluto (Bourbon x Typica). Alto e produtivo, entrega aquele café encorpado com notas intensas de chocolate amargo, caramelo e castanhas.</p>
+                    <a href="#" class="btn btn-custom mt-3">Ver detalhes da lavoura</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="lotes.html" class="btn btn-lg" style="background-color: var(--texto-marrom); color: var(--bg-creme);">Conheça os Lotes Torrados Disponíveis</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4" style="background-color: var(--texto-marrom); color: var(--bg-creme);">
+        <p class="mb-0">&copy; 2026 Café Avelar. Todos os direitos reservados.</p>
+        <p class="small mt-2 mb-0">Sul de Minas, Brasil</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Extração | Café Avelar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { 
+            --bg-creme: #ebdcb9; 
+            --texto-marrom: #3b1b0b; 
+            --verde-folha: #4a5d23;
+        }
+        body { 
+            background-color: var(--bg-creme); 
+            color: var(--texto-marrom); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        h1, h2, h3, h5, .navbar-brand, .font-serif { 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            font-weight: bold; 
+        }
+        
+        /* Navbar */
+        .navbar { background-color: var(--texto-marrom); }
+        .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
+        .dropdown-menu { background-color: var(--texto-marrom); border: 1px solid var(--bg-creme); }
+        .dropdown-item { color: var(--bg-creme); }
+        .dropdown-item:hover { background-color: var(--verde-folha); color: white; }
+
+        /* Estrutura dos Métodos */
+        .metodo-section { 
+            border-bottom: 1px dashed var(--texto-marrom); 
+            padding-bottom: 3rem; 
+            margin-bottom: 3rem; 
+        }
+        .metodo-section:last-child {
+            border-bottom: none;
+        }
+
+        /* Espaço para Imagem */
+        .img-metodo-placeholder {
+            background-color: rgba(59, 27, 11, 0.05);
+            border: 2px dashed var(--texto-marrom);
+            border-radius: 8px;
+            height: 100%;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--texto-marrom);
+            font-style: italic;
+            text-align: center;
+            padding: 1rem;
+            /* Se for usar imagem real depois, basta colocar background-image aqui e background-size: cover */
+        }
+
+        /* Caixa de Tutorial */
+        .tutorial-box {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-left: 4px solid var(--texto-marrom);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+        }
+        
+        .tutorial-box ol {
+            padding-left: 1rem;
+            margin-bottom: 0;
+        }
+        .tutorial-box li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVEGAÇÃO COMPLETA -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CAFÉ AVELAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    
+                    <!-- Dropdown de Variedades -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Nossas Variedades
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="variedade-catucai-amarelo.html">Catucaí Amarelo</a></li>
+                            <li><a class="dropdown-item" href="variedade-catucai-vermelho.html">Catucaí Vermelho</a></li>
+                            <li><a class="dropdown-item" href="variedade-topazio.html">Topázio</a></li>
+                            <li><a class="dropdown-item" href="variedade-mundo-novo.html">Mundo Novo</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="lotes.html">Lotes</a></li>
+                    
+                    <!-- Dropdown de Preparo -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Preparo em Casa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="extracao.html">Métodos de Extração</a></li>
+                            <li><a class="dropdown-item" href="controle.html">Tempo e Temperatura</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="container-fluid py-5" style="background-color: rgba(59, 27, 11, 0.05); border-bottom: 2px solid var(--texto-marrom);">
+        <div class="container text-center">
+            <h1 class="display-4">Guia de Extração</h1>
+            <p class="lead mt-3">A torra é a nossa parte. A extração é o seu momento de artista. Conheça as principais formas de preparar o seu Café Avelar e descubra qual perfil agrada mais o seu paladar.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        
+        <!-- 1. HARIO V60 -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Hario V60 (Coado)</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem do Hario V60 aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>O formato cônico (ângulo de 60 graus) e as ranhuras espirais fazem a água fluir para o centro, resultando em uma extração incrivelmente limpa que destaca as notas mais sutis e brilhantes do grão.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Bebida muito limpa, acidez brilhante, destaca notas florais/frutadas.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Exige precisão no despejo da água (uso de chaleira bico de ganso é recomendado).</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li>Dobre a costura do filtro de papel e encaixe no V60. Escalde com água quente para retirar gosto de papel e aquecer o recipiente. Descarte essa água.</li>
+                            <li>Adicione o pó (moagem média-fina) e nivele.</li>
+                            <li>Faça a <strong>floração (bloom)</strong>: despeje apenas água suficiente para umedecer todo o pó e aguarde 30 segundos.</li>
+                            <li>Continue despejando a água restante em movimentos circulares lentos, do centro para as bordas, mantendo o nível da água constante.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. MELITTA -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Coador Melitta (Tradicional)</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem do Coador Melitta aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>O método mais clássico e nostálgico nos lares brasileiros. O porta-filtro tem o fundo chato com um pequeno furo, o que retém a água por mais tempo em contato com o pó, gerando uma extração por imersão parcial.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Prático, acessível, resulta em um café encorpado e com sabor mais intenso.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> A água parada pode gerar super-extração (amargor) se a moagem estiver muito fina.</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li>Dobre as costuras laterais e inferiores do filtro de papel. Escalde-o com água quente.</li>
+                            <li>Coloque o pó (moagem média). Umedeça o pó e aguarde 30 segundos (floração).</li>
+                            <li>Despeje o restante da água no centro. Evite jogar água diretamente nas bordas de papel, pois ela pode descer sem passar pelo café.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. COADOR DE PANO -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Coador de Pano</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem do Coador de Pano aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>O gosto da casa de vó. O tecido de algodão permite que mais óleos essenciais do grão passem para a xícara do que o filtro de papel, resultando em uma bebida muito aromática, redonda e com textura aveludada.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Reutilizável e sustentável. Entrega muito corpo e excelente aroma.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Exige limpeza rigorosa; o pano precisa ser trocado a cada 2 ou 3 meses para não reter gostos indesejados.</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li><em>Dica: Se o pano for novo, ferva-o em água com borra de café velha por 10 minutos para tirar o gosto de algodão.</em></li>
+                            <li>Escalde o coador. Adicione o pó (moagem média/grossa).</li>
+                            <li>Despeje a água quente em fluxo constante e em movimentos circulares até finalizar.</li>
+                            <li>Após o uso, lave o pano <strong>apenas com água fervente</strong> (nunca use sabão ou detergente) e guarde na geladeira em um pote com água.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. PRENSA FRANCESA -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Prensa Francesa (French Press)</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem da Prensa Francesa aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>Um método de infusão total onde o café fica em contato direto com a água. A ausência de filtro de papel permite que 100% dos óleos essenciais e micropartículas passem para a bebida.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Fácil de fazer; não usa filtros de papel; resulta em um café muito encorpado e denso.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Deixa sedimentos no fundo da xícara; exige que você tenha um moinho, pois requer moagem especificamente grossa.</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li>Escalde a prensa com água quente e descarte. Adicione o pó com <strong>moagem grossa</strong> (lembra sal grosso).</li>
+                            <li>Coloque toda a água quente de uma vez. Mexa suavemente com uma colher.</li>
+                            <li>Encaixe a tampa (com o êmbolo todo para cima) para manter o calor. <strong>Aguarde exatos 4 minutos.</strong></li>
+                            <li>Abaixe o êmbolo lentamente e sirva imediatamente para interromper a extração.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. AEROPRESS -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">AeroPress</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem da AeroPress aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>Criada nos anos 2000, parece uma seringa gigante. É o método favorito dos "geeks" do café porque combina infusão com pressão do ar, permitindo inventar milhares de receitas diferentes variando o tempo, a temperatura e a moagem.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Rápido, portátil, indestrutível e extremamente versátil. Produz uma bebida encorpada, mas sem resíduos (graças ao microfiltro).</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Prepara pouco café por vez (geralmente uma xícara).</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar (Método Tradicional)</h5>
+                        <ol>
+                            <li>Coloque o microfiltro de papel na tampa de plástico e escalde. Encaixe a base sobre a xícara.</li>
+                            <li>Adicione o pó (moagem fina a média). Despeje a água quente.</li>
+                            <li>Mexa vigorosamente por 10 segundos. Encaixe o êmbolo levemente no topo para criar vácuo e evitar que a água goteje.</li>
+                            <li>Aguarde 1 minuto e pressione o êmbolo para baixo de forma constante até ouvir um som de ar ("hiss").</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. ESPRESSO -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Espresso (Máquina)</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem da Máquina de Espresso aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>O ápice da intensidade. Água muito quente é forçada sob alta pressão (geralmente 9 bar) através de uma "pastilha" de café finamente moído e densamente compactado.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Rápido, intenso, concentrado. Cria a cobiçada camada de <em>crema</em> e é a base perfeita para lattes e cappuccinos.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Equipamentos (máquina e moinho) são muito caros; exige estudo e técnica para calibrar a máquina corretamente (dial-in).</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li>Limpe e seque o porta-filtro. Moa o café muito fino (moagem espresso) diretamente nele.</li>
+                            <li>Bata levemente para distribuir o pó e use o <strong>tamper</strong> (prensador) para compactar a pastilha com força, deixando-a perfeitamente reta.</li>
+                            <li>Purgue a máquina (solte um pouco de água). Encaixe o porta-filtro e inicie a extração imediatamente.</li>
+                            <li>A extração ideal deve durar entre 25 a 30 segundos, parecendo "mel quente" caindo na xícara.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. SIFÃO (GLOBINHO) -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Sifão (Globinho ou Syphon)</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem do Sifão aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>Um método teatral, criado no século XIX, que parece um equipamento de laboratório. Usa o princípio da expansão e contração de gases. A água ferve no balão inferior e sobe para o balão superior, onde ocorre a infusão.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Visualmente espetacular. A temperatura da água se mantém perfeitamente estável durante toda a infusão, resultando num café finíssimo, limpo e suave.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Frágil, trabalhoso de preparar, complexo de limpar e exige uma fonte de calor dedicada (pequeno maçarico ou chama a álcool).</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li>Coloque água quente no balão inferior e ligue o maçarico embaixo dele. Encaixe o filtro no balão superior e fixe-o levemente ao balão inferior.</li>
+                            <li>Quando a água ferver, a pressão a fará subir para o balão superior. Aperte o encaixe.</li>
+                            <li>Adicione o pó (moagem média), mexa e inicie a contagem de tempo (cerca de 1 minuto a 1m30s).</li>
+                            <li>Desligue e remova a chama. O resfriamento do balão inferior criará vácuo, sugando o café pronto através do filtro de volta para a base.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. CAFÉ TURCO -->
+        <div class="metodo-section">
+            <h2 class="mb-4 text-center text-md-start">Café Turco (Ibrik / Cezve)</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="img-metodo-placeholder">
+                        [Insira Imagem do Cezve aqui]
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>Patrimônio Cultural Imaterial da Humanidade pela UNESCO. É a forma mais antiga de preparar café, onde o pó é fervido junto com a água em um recipiente tradicional de cobre ou latão chamado Ibrik ou Cezve.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6"><strong>Vantagens:</strong> Riquíssimo em cultura e tradição. Extremamente denso, forte e aromático.</div>
+                        <div class="col-sm-6"><strong>Desvantagens:</strong> Não é coado, então a borra fica no fundo da xícara. Exige uma moagem <strong>extra-fina</strong> (textura de talco), impossível em moinhos domésticos comuns.</div>
+                    </div>
+                    <div class="tutorial-box">
+                        <h5 class="font-serif text-uppercase mb-3" style="font-size: 1rem;">Como Preparar</h5>
+                        <ol>
+                            <li>No Ibrik, coloque água em temperatura ambiente, o pó de café extra-fino e açúcar (se desejar). Especiarias como cardamomo também são comuns. Não mexa ainda.</li>
+                            <li>Coloque em fogo bem baixo. Conforme aquece, o pó afunda e você pode mexer levemente apenas uma vez.</li>
+                            <li>Quando estiver perto de ferver, uma espuma escura e espessa subirá rapidamente.</li>
+                            <li><strong>Não deixe ferver.</strong> Antes que transborde, retire do fogo, sirva um pouco da espuma nas xícaras. Volte o Ibrik ao fogo, deixe a espuma subir de novo e sirva o restante. Espere a borra assentar antes de beber.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4" style="background-color: var(--texto-marrom); color: var(--bg-creme);">
+        <p class="mb-0">&copy; 2026 Café Avelar. Todos os direitos reservados.</p>
+        <p class="small mt-2 mb-0">Sul de Minas, Brasil</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

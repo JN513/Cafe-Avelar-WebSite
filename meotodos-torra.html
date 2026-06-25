@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos e Torradores | Café Avelar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Paleta de cores da Identidade Visual */
+        :root {
+            --bg-creme: #ebdcb9;
+            --texto-marrom: #3b1b0b;
+            --verde-folha: #4a5d23;
+            --destaque-torra: #8b5a2b;
+        }
+        
+        body {
+            background-color: var(--bg-creme);
+            color: var(--texto-marrom);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1, h2, h3, h4, .navbar-brand, .font-serif {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        .navbar { background-color: var(--texto-marrom); }
+        .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
+
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 2px solid var(--texto-marrom);
+            background-color: rgba(59, 27, 11, 0.05);
+        }
+
+        /* Estilos customizados para os cards */
+        .card-maquina {
+            background-color: transparent;
+            border: 2px solid var(--texto-marrom);
+            border-radius: 8px;
+        }
+        .card-maquina .card-header {
+            background-color: var(--texto-marrom);
+            color: var(--bg-creme);
+            font-size: 1.2rem;
+            font-family: Georgia, serif;
+        }
+
+        /* Estilo para a linha do tempo (Fases da Torra) */
+        .timeline-box {
+            border-left: 4px solid var(--destaque-torra);
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .fase-badge {
+            background-color: var(--destaque-torra);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação Atualizada -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CAFÉ AVELAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Nossas Variedades
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="variedade-catucai-amarelo.html">Catucaí Amarelo</a></li>
+                            <li><a class="dropdown-item" href="variedade-catucai-vermelho.html">Catucaí Vermelho</a></li>
+                            <li><a class="dropdown-item" href="variedade-topazio.html">Topázio</a></li>
+                            <li><a class="dropdown-item" href="variedade-mundo-novo.html">Mundo Novo</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Novo Link para a página exclusiva de Lotes -->
+                    <li class="nav-item"><a class="nav-link" href="lotes.html">Nossos Lotes</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Preparo em Casa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="extracao.html">Métodos de Extração</a></li>
+                            <li><a class="dropdown-item" href="controle.html">Tempo e Temperatura</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero-section container-fluid">
+        <div class="container">
+            <h1 class="display-4">A Ciência e a Arte da Torra</h1>
+            <p class="lead mt-3">Descubra como o calor transforma a estrutura química do grão verde, criando as centenas de compostos aromáticos que você encontra na sua xícara.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        
+        <!-- SEÇÃO 1: Os Equipamentos (Torradores) -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2>Tipos de Torradores</h2>
+                <p>O equipamento dita como o calor é transferido para o grão. No universo dos cafés especiais, trabalhamos principalmente com duas tecnologias.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Tambor Rotativo -->
+                <div class="col-lg-6">
+                    <div class="card card-maquina h-100">
+                        <div class="card-header text-center">
+                            Tambor Rotativo (Drum Roaster)
+                        </div>
+                        <div class="card-body">
+                            <p>É o método clássico e o mais utilizado por torrefações artesanais em todo o mundo. O café é inserido em um cilindro metálico (geralmente aço carbono ou ferro fundido) que gira constantemente sobre uma fonte de calor.</p>
+                            <ul>
+                                <li><strong>Transferência de Calor:</strong> Ocorre por <em>Condução</em> (quando o grão toca o metal quente do tambor) e <em>Convecção</em> (o fluxo de ar quente que atravessa o sistema).</li>
+                                <li><strong>Resultado na Xícara:</strong> Tende a produzir cafés com <strong>mais corpo</strong>, excelente desenvolvimento da doçura (caramelização) e notas clássicas de chocolate e castanhas, graças ao contato direto com o tambor quente.</li>
+                                <li><strong>Desafio:</strong> Requer grande habilidade do mestre torrador para evitar que o metal queime a superfície do grão (defeito conhecido como <em>scorching</em>).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leito Fluido -->
+                <div class="col-lg-6">
+                    <div class="card card-maquina h-100">
+                        <div class="card-header text-center">
+                            Leito Fluido (Fluid Bed)
+                        </div>
+                        <div class="card-body">
+                            <p>Uma tecnologia mais moderna inspirada na engenharia química. Não há tambor metálico girando. Em vez disso, um fluxo constante de ar quente em alta velocidade empurra os grãos para cima, fazendo-os flutuar e "dançar" enquanto torram.</p>
+                            <ul>
+                                <li><strong>Transferência de Calor:</strong> Quase 100% por <em>Convecção</em> (ar quente). Não há contato constante com superfícies de metal.</li>
+                                <li><strong>Resultado na Xícara:</strong> Produz uma torra incrivelmente limpa e uniforme. Costuma destacar <strong>acidez brilhante</strong>, notas florais e frutadas intensas, preservando muito bem as características originais do <em>terroir</em>.</li>
+                                <li><strong>Vantagem:</strong> O risco de queimar a superfície do grão é drasticamente reduzido, e a película prateada (chaff) é soprada para fora imediatamente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border-color: var(--texto-marrom); opacity: 0.3;" class="my-5">
+
+        <!-- SEÇÃO 2: As Fases do Processo -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2>As Fases do Processo de Torra</h2>
+                <p>Independente da máquina, todo grão de café passa por estágios químicos fundamentais durante a torrefação.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    
+                    <div class="timeline-box">
+                        <span class="fase-badge">1. Secagem (Drying Phase)</span>
+                        <p class="mb-0">O grão cru possui cerca de 10% a 12% de umidade. Nos primeiros minutos da torra, o grão absorve calor intensamente (reação endotérmica) para evaporar essa água. A cor muda lentamente de verde para um tom pálido/amarelo claro, e o cheiro lembra feno ou grama cortada.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <span class="fase-badge" style="background-color: #a0522d;">2. Reação de Maillard</span>
+                        <p class="mb-0">A partir de aproximadamente 150°C, a mágica acontece. Açúcares e aminoácidos começam a reagir, criando centenas de compostos aromáticos novos. O grão ganha cor marrom (efeito de caramelização) e passa a exalar um aroma delicioso de pão assando e castanhas tostadas. É aqui que o corpo da bebida começa a ser construído.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <span class="fase-badge" style="background-color: #5c3a21;">3. O Primeiro Estalo (First Crack)</span>
+                        <p class="mb-0">A pressão do vapor de água e dos gases (como CO2) se acumula dentro da semente até que a estrutura celular se rompe. Ocorre um estalo sonoro semelhante ao de pipoca. A partir deste ponto, o café já pode ser consumido. Inicia-se a fase de <strong>Desenvolvimento</strong>, onde o mestre torrador decide o quão clara ou escura a torra será.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr style="border-color: var(--texto-marrom); opacity: 0.3;" class="my-5">
+
+        <!-- SEÇÃO 3: Níveis/Estilos de Torra -->
+        <section>
+            <div class="text-center mb-5">
+                <h2>Estilos de Torra</h2>
+                <p>O tempo de desenvolvimento pós-estalo define o perfil sensorial do seu Café Avelar.</p>
+            </div>
+
+            <div class="table-responsive border rounded" style="border-color: var(--texto-marrom) !important; background-color: rgba(255,255,255,0.4);">
+                <table class="table table-borderless align-middle text-center mb-0" style="--bs-table-bg: transparent; --bs-table-color: var(--texto-marrom);">
+                    <thead style="border-bottom: 2px solid var(--texto-marrom);">
+                        <tr>
+                            <th class="py-3">Estilo</th>
+                            <th class="py-3">Características Sensoriais</th>
+                            <th class="py-3">Foco do Sabor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(59, 27, 11, 0.2);">
+                            <td class="py-3 font-serif fw-bold" style="color: #c48b53;">Nórdica / Clara</td>
+                            <td class="py-3 text-start">Acidez vibrante, corpo leve (semelhante a chá), altíssima complexidade.</td>
+                            <td class="py-3">100% no *Terroir* (origem da planta).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(59, 27, 11, 0.2);">
+                            <td class="py-3 font-serif fw-bold" style="color: #8b5a2b;">Média (Nossa Especialidade)</td>
+                            <td class="py-3 text-start">O balanço perfeito. Doçura caramelizada alta, acidez controlada e corpo aveludado.</td>
+                            <td class="py-3">Equilíbrio entre a Origem e a Torra.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(59, 27, 11, 0.2);">
+                            <td class="py-3 font-serif fw-bold" style="color: #5c3a21;">Inglesa / Média-Escura</td>
+                            <td class="py-3 text-start">Acidez muito baixa, corpo denso, notas de chocolate amargo e cacau.</td>
+                            <td class="py-3">Sabor dominante do processo de torra.</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 font-serif fw-bold" style="color: #2b170a;">Escura (Francesa/Italiana)</td>
+                            <td class="py-3 text-start">Óleos na superfície, sabor tostado intenso, fumaça, amargor elevado.</td>
+                            <td class="py-3">100% na Torra (origem mascarada).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-4 mt-5" style="background-color: var(--texto-marrom); color: var(--bg-creme);">
+        <p class="mb-0">&copy; 2026 Café Avelar. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

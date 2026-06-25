@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processos e Curvas de Torra | Café Avelar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { 
+            --bg-creme: #ebdcb9; 
+            --texto-marrom: #3b1b0b; 
+            --verde-folha: #4a5d23;
+        }
+        body { 
+            background-color: var(--bg-creme); 
+            color: var(--texto-marrom); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        h1, h2, h3, .navbar-brand { 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            font-weight: bold; 
+        }
+        .navbar { background-color: var(--texto-marrom); }
+        .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
+        
+        .card-custom { 
+            background-color: transparent; 
+            border: 1px solid var(--texto-marrom); 
+            border-radius: 8px;
+        }
+        .card-header-custom {
+            background-color: rgba(59, 27, 11, 0.1);
+            border-bottom: 1px solid var(--texto-marrom);
+            font-weight: bold;
+            font-family: Georgia, serif;
+        }
+        .badge-torra {
+            background-color: var(--texto-marrom);
+            color: var(--bg-creme);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação Atualizada -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CAFÉ AVELAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Nossas Variedades
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="variedade-catucai-amarelo.html">Catucaí Amarelo</a></li>
+                            <li><a class="dropdown-item" href="variedade-catucai-vermelho.html">Catucaí Vermelho</a></li>
+                            <li><a class="dropdown-item" href="variedade-topazio.html">Topázio</a></li>
+                            <li><a class="dropdown-item" href="variedade-mundo-novo.html">Mundo Novo</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Novo Link para a página exclusiva de Lotes -->
+                    <li class="nav-item"><a class="nav-link" href="lotes.html">Nossos Lotes</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Preparo em Casa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="extracao.html">Métodos de Extração</a></li>
+                            <li><a class="dropdown-item" href="controle.html">Tempo e Temperatura</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container-fluid py-5" style="background-color: rgba(74, 93, 35, 0.1);">
+        <div class="container text-center">
+            <h1 class="display-5">A Ciência da Torra</h1>
+            <p class="lead">Onde a química encontra a arte. Entenda como o calor transforma o grão verde em uma experiência sensorial.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        
+        <!-- Seção 1: Equipamentos -->
+        <section class="mb-5">
+            <h2 class="mb-4 text-center">Métodos de Transferência de Calor</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-header card-header-custom">
+                            Tambor Rotativo (Drum Roaster)
+                        </div>
+                        <div class="card-body">
+                            <p>O método mais clássico e reverenciado. Os grãos giram dentro de um cilindro de aço ou ferro fundido, que é aquecido por uma chama (gás) logo abaixo.</p>
+                            <ul>
+                                <li><strong>Transferência:</strong> Principalmente Condução (contato com o metal) e Convecção (ar quente passando pelo tambor).</li>
+                                <li><strong>Perfil na Xícara:</strong> Tende a desenvolver mais corpo, doçura profunda e notas clássicas de caramelo e chocolate, graças ao contato direto com o metal quente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-header card-header-custom">
+                            Leito Fluido (Fluid Bed)
+                        </div>
+                        <div class="card-body">
+                            <p>Uma abordagem mais moderna. Não há tambor metálico giratório; em vez disso, um fluxo constante de ar quente em alta velocidade levanta e torra os grãos.</p>
+                            <ul>
+                                <li><strong>Transferência:</strong> Quase 100% Convecção.</li>
+                                <li><strong>Perfil na Xícara:</strong> Proporciona uma torra muito uniforme e limpa. Destaca acidez brilhante e notas complexas, reduzindo o risco de "queimar" a superfície do grão (scorching).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border-color: var(--texto-marrom); opacity: 0.3;" class="my-5">
+
+        <!-- Seção 2: Estilos de Torra -->
+        <section class="mb-5">
+            <h2 class="mb-4 text-center">Estilos e Perfis de Torra</h2>
+            
+            <div class="row g-4">
+                <!-- Nórdica -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom h-100 text-center p-3">
+                        <h4 class="mb-3">Nórdica</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #d2b48c; color: #3b1b0b;">Muito Clara</span>
+                        <p class="small">Extremamente popular nos países escandinavos. A torra é interrompida logo após o Primeiro Estalo (First Crack). O foco é 100% no <em>Terroir</em>, resultando em uma bebida quase parecida com chá, com acidez altíssima, corpo leve e notas florais/frutadas explosivas.</p>
+                    </div>
+                </div>
+
+                <!-- Média -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom h-100 text-center p-3">
+                        <h4 class="mb-3">Média</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #8b5a2b;">Equilibrada</span>
+                        <p class="small">O ponto de equilíbrio perfeito (como o nosso Catucaí Amarelo). A caramelização dos açúcares atinge seu pico sem mascarar as características originais do grão. Traz excelente doçura, corpo aveludado e acidez controlada.</p>
+                    </div>
+                </div>
+
+                <!-- Inglesa -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom h-100 text-center p-3">
+                        <h4 class="mb-3">Inglesa (City+)</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #5c3a21;">Média-Escura</span>
+                        <p class="small">Um perfil tradicional, avançando um pouco mais no desenvolvimento pós-estalo. Reduz a acidez drasticamente em favor de um corpo mais pesado e notas intensas de castanhas, cacau e um leve amargor agradável. Muito usada para harmonização.</p>
+                    </div>
+                </div>
+
+                <!-- Escura -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom h-100 text-center p-3">
+                        <h4 class="mb-3">Escura</h4>
+                        <span class="badge badge-torra mb-3 mx-auto" style="background-color: #2b170a;">Intensa</span>
+                        <p class="small">Os grãos chegam ao Segundo Estalo e óleos começam a surgir na superfície. A origem do grão desaparece e os sabores da torra assumem o controle (fumaça, cinzas, amargor intenso). Historicamente usada para disfarçar defeitos em cafés comerciais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Curvas de Torra -->
+        <section class="p-4 border rounded" style="border-color: var(--texto-marrom) !important; background-color: rgba(255,255,255,0.4);">
+            <h3 class="text-center mb-3">Entendendo a Curva de Torra (RoR)</h3>
+            <p>No Café Avelar, usamos telemetria para desenhar a curva térmica perfeita. O conceito mais importante é o <strong>RoR (Rate of Rise / Taxa de Aquecimento)</strong>. Ele mede a velocidade (em graus por minuto) com que o grão ganha calor.</p>
+            <p>Uma curva ideal geralmente tem um RoR continuamente decrescente: o café recebe muita energia no início e essa energia vai sendo reduzida gradativamente até o momento de tirar o lote do torrador. Se o RoR subir repentinamente (um *flick*) ou cair e subir de novo, o café pode apresentar sabores de cozido (baked) ou adstringência indesejada. O controle rigoroso dessas variáveis é o que separa um café comum de um café excepcional.</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-4 mt-5" style="background-color: var(--texto-marrom); color: var(--bg-creme);">
+        <p class="mb-0">&copy; 2026 Café Avelar. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

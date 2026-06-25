@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Extração | Café Avelar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { 
+            --bg-creme: #ebdcb9; 
+            --texto-marrom: #3b1b0b; 
+            --verde-folha: #4a5d23;
+        }
+        body { 
+            background-color: var(--bg-creme); 
+            color: var(--texto-marrom); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        h1, h2, h3, .navbar-brand, .font-serif { 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            font-weight: bold; 
+        }
+        
+        /* Navbar */
+        .navbar { background-color: var(--texto-marrom); }
+        .navbar-dark .navbar-nav .nav-link { color: var(--bg-creme); }
+        .dropdown-menu { background-color: var(--texto-marrom); border: 1px solid var(--bg-creme); }
+        .dropdown-item { color: var(--bg-creme); }
+        .dropdown-item:hover { background-color: var(--verde-folha); color: white; }
+
+        /* Caixas de Destaque */
+        .highlight-box { 
+            background-color: rgba(59, 27, 11, 0.05); 
+            border-left: 5px solid var(--texto-marrom); 
+            padding: 1.5rem; 
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .highlight-box:hover {
+            transform: translateY(-3px);
+            background-color: rgba(59, 27, 11, 0.1); 
+        }
+        .highlight-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVEGAÇÃO COMPLETA -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CAFÉ AVELAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Nossas Variedades
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="variedade-catucai-amarelo.html">Catucaí Amarelo</a></li>
+                            <li><a class="dropdown-item" href="variedade-catucai-vermelho.html">Catucaí Vermelho</a></li>
+                            <li><a class="dropdown-item" href="variedade-topazio.html">Topázio</a></li>
+                            <li><a class="dropdown-item" href="variedade-mundo-novo.html">Mundo Novo</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="lotes.html">Nossos Lotes</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Preparo em Casa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="extracao.html">Métodos de Extração</a></li>
+                            <li><a class="dropdown-item" href="controle.html">Tempo e Temperatura</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="torra.html">A Torra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="container-fluid py-5" style="background-color: rgba(59, 27, 11, 0.05); border-bottom: 2px solid var(--texto-marrom);">
+        <div class="container text-center">
+            <h1 class="display-4 font-serif">Dominando as Variáveis</h1>
+            <p class="lead mt-3">Na torra, controlamos o calor com sensores de precisão milimétrica. Na extração em casa, você também tem o poder de manipular as variáveis para extrair a xícara perfeita.</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row g-4 align-items-stretch">
+            
+            <!-- 1. Temperatura da Água -->
+            <div class="col-md-6">
+                <div class="highlight-box h-100">
+                    <h2>🌡️ Temperatura da Água</h2>
+                    <p>A temperatura ideal para coar café especial fica entre <strong>90°C e 96°C</strong>. A água é o solvente responsável por extrair as moléculas de sabor do grão.</p>
+                    <ul>
+                        <li><strong>Água muito quente (Fervendo):</strong> Acelera excessivamente a extração, queimando os compostos e extraindo taninos amargos (Super-extração).</li>
+                        <li><strong>Água muito fria:</strong> Não tem energia suficiente para dissolver os açúcares e compostos aromáticos vitais, deixando o café com sabor "aguado", ralo e desagradavelmente ácido (Sub-extração).</li>
+                    </ul>
+                    <p class="small mb-0"><em>Dica: Se não tiver um termômetro ou chaleira elétrica, deixe a água ferver, desligue o fogo e aguarde de 45 segundos a 1 minuto antes de jogar no pó.</em></p>
+                </div>
+            </div>
+
+            <!-- 2. Granulometria (Moagem) -->
+            <div class="col-md-6">
+                <div class="highlight-box h-100">
+                    <h2>⚙️ Granulometria (Moagem)</h2>
+                    <p>O tamanho das partículas do café afeta diretamente a área de superfície em contato com a água e a resistência ao fluxo da água.</p>
+                    <ul>
+                        <li><strong>Moagem Fina (Menor pó):</strong> Maior superfície de contato. A extração é muito rápida e a passagem da água é restrita (lenta). Ideal para Espresso.</li>
+                        <li><strong>Moagem Grossa (Maior grão):</strong> Menor superfície de contato. A extração é mais lenta, mas a água flui facilmente. Ideal para Prensa Francesa e Cold Brew.</li>
+                    </ul>
+                    <p class="small mb-0"><em>Dica: Se o seu café coado estiver muito amargo, o pó está extraindo demais; tente engrossar a moagem. Se estiver ralo e ácido demais, afine.</em></p>
+                </div>
+            </div>
+
+            <!-- 3. Proporção (Ratio) -->
+            <div class="col-md-6">
+                <div class="highlight-box h-100">
+                    <h2>⚖️ Proporção (Brew Ratio)</h2>
+                    <p>É a relação matemática entre a quantidade de pó de café e a quantidade de água utilizada. Ela dita a intensidade da bebida.</p>
+                    <ul>
+                        <li><strong>Proporção Baixa (ex: 1:10 ou 1:12):</strong> Menos água para cada grama de café. A bebida final será mais intensa, encorpada e concentrada (puxado para o tradicional).</li>
+                        <li><strong>Proporção Alta (ex: 1:16 ou 1:18):</strong> Mais água para cada grama de café. Resulta em uma bebida mais suave, delicada e onde as notas florais e frutadas ficam mais evidentes.</li>
+                    </ul>
+                    <p class="small mb-0"><em>Dica: Uma excelente proporção de partida para os nossos cafés no filtro de papel é <strong>1:15</strong> (ex: 20g de café moído para 300ml de água). Invista em uma balança de cozinha para manter o padrão!</em></p>
+                </div>
+            </div>
+
+            <!-- 4. Tempo de Contato -->
+            <div class="col-md-6">
+                <div class="highlight-box h-100">
+                    <h2>⏱️ Tempo de Contato</h2>
+                    <p>É o tempo total que a água passa interagindo fisicamente com o pó. Ele está intimamente ligado à granulometria que você escolheu.</p>
+                    <ul>
+                        <li><strong>Sub-extração:</strong> Tempo muito curto faz com que a água extraia apenas os compostos mais solúveis (ácidos e sais), gerando um café adstringente.</li>
+                        <li><strong>Super-extração:</strong> Tempo muito longo faz com que a água comece a quebrar estruturas que não deveriam ser dissolvidas, trazendo amargor e secura à boca.</li>
+                    </ul>
+                    <p class="small mb-0"><em>Dica: Em um método coado tradicional (como o Hario V60), busque finalizar sua extração total (incluindo o despejo de água e o gotejamento final) entre 2:30 e 3:30 minutos.</em></p>
+                </div>
+            </div>
+
+            <!-- 5. Qualidade da Água -->
+            <div class="col-md-6">
+                <div class="highlight-box h-100">
+                    <h2>💧 Qualidade da Água</h2>
+                    <p>Uma xícara de café coado é composta por <strong>mais de 98% de água</strong>. Se a água não for boa, seu café especial não atingirá o potencial.</p>
+                    <ul>
+                        <li><strong>Cloro:</strong> É o maior inimigo do café. Ele mascara as notas sutis, destrói o aroma floral e traz um retrogosto medicinal/químico horrível.</li>
+                        <li><strong>Dureza da Água:</strong> Águas com composição mineral ideal (cálcio e magnésio) ajudam a "puxar" os sabores do pó. Águas puras demais (destiladas) não extraem nada, e águas duras demais (muito minerais) geram cafés chatos e sem brilho.</li>
+                    </ul>
+                    <p class="small mb-0"><em>Dica: Use sempre água filtrada (com carvão ativado) ou água mineral de boa qualidade e pH equilibrado. </em></p>
+                </div>
+            </div>
+
+            <!-- 6. Agitação (Turbulência) -->
+            <div class="col-md-6">
+                <div class="highlight-box h-100">
+                    <h2>🌪️ Agitação (Turbulência)</h2>
+                    <p>Refere-se à energia mecânica aplicada ao pó de café pela água caindo ou pela ação de mexer com uma colher (ou espátula).</p>
+                    <ul>
+                        <li><strong>Efeito Positivo:</strong> A agitação garante que todos os grânulos de café sejam umedecidos de forma homogênea, quebrando grumos e evitando a "canalização" (quando a água desce sem encostar no café).</li>
+                        <li><strong>Efeito Negativo:</strong> Muita agitação faz as partículas menores (finos) descerem e entupirem os poros do filtro de papel, travando a passagem da água e amargando a bebida.</li>
+                    </ul>
+                    <p class="small mb-0"><em>Dica: Despeje a água em círculos lentos, constantes e concentricos. Deixe a gravidade e o fluxo suave da chaleira fazerem o trabalho pesado.</em></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5" style="background-color: var(--texto-marrom); color: var(--bg-creme);">
+        <p class="mb-0">&copy; 2026 Café Avelar. Todos os direitos reservados.</p>
+        <p class="small mt-2 mb-0">Sul de Minas, Brasil</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
